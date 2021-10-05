@@ -5,10 +5,6 @@ Author: Zhen Xie zhen.xie@anl.gov
 [DeepSpeed](https://www.deepspeed.ai/) is a deep learning optimization
 library that makes distributed training easy, efficient, and effective.
 
-<p align="center"><i><b>10x Larger Models</b></i></p>
-<p align="center"><i><b>10x Faster Training</b></i></p>
-<p align="center"><i><b>Minimal Code Change</b></i></p>
-
 Here is the DeepSpeed implementation:
 https://github.com/microsoft/DeepSpeed
 
@@ -81,10 +77,10 @@ installation instructions](https://www.deepspeed.ai/tutorials/advanced-install/)
 * [[PyTorch Lightning Blog] Accessible Multi-Billion Parameter Model Training with PyTorch Lightning + DeepSpeed](https://medium.com/pytorch-lightning/accessible-multi-billion-parameter-model-training-with-pytorch-lightning-deepspeed-c9333ac3bb59)
 * [1-bit Adam v2: NCCL-based implementation and more](https://www.deepspeed.ai/tutorials/onebit-adam/)
 * [ZeRO-3 Offload: Scale your models to trillion parameters without code changes while leveraging both CPUs & GPUs](https://www.deepspeed.ai/news/2021/03/07/zero3-offload.html)
-* [[í ¾í´—Hugging Face Blog] Fit More and Train Faster With ZeRO via DeepSpeed and FairScale](https://huggingface.co/blog/zero-deepspeed-fairscale)
+* [[Hugging Face Blog] Fit More and Train Faster With ZeRO via DeepSpeed and FairScale](https://huggingface.co/blog/zero-deepspeed-fairscale)
 
 
-### Examples
+### Example
 
 There is an example deployed by DeepSpeed here, with pytorch using cifar10.
 
@@ -93,12 +89,18 @@ For interactive job:
 It has two steps:
 
 #Step1: "Setting up env"
+```bash
 #conda env create --name deepspeed --file /lus/theta-fs0/projects/datascience/zhen/env_deepspeed.yml //set up env and install packages
+```bash
 #conda activate deepspeed // activate env
+```
 
 #Step2: "Run script"
+```bash
 #cd /lus/theta-fs0/projects/datascience/zhen/DeepSpeed
+```
+```bash
 #deepspeed cifar10_deepspeed.py --deepspeed --deepspeed_config ds_config.json $@
-
+```
 
 For submitting jobs in the script (non-interactive) job mode, take a look in the `submissions` folder for more details about this.
