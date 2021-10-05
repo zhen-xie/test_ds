@@ -91,6 +91,7 @@ It has two steps:
 #Step1: "Setting up env"
 ```bash
 #conda env create --name deepspeed --file /lus/theta-fs0/projects/datascience/zhen/env_deepspeed.yml //set up env and install packages
+```
 ```bash
 #conda activate deepspeed // activate env
 ```
