@@ -85,18 +85,18 @@ It has two steps:
 
 #Step1: "Setting up env"
 ```bash
-#conda env create --name deepspeed --file /lus/theta-fs0/projects/datascience/zhen/env_deepspeed.yml //set up env and install packages
+conda env create --name deepspeed --file /lus/theta-fs0/projects/datascience/zhen/env_deepspeed.yml //set up env and install packages
 ```
 ```bash
-#conda activate deepspeed // activate env
+conda activate deepspeed // activate env
 ```
 
 #Step2: "Run script"
 ```bash
-#cd /lus/theta-fs0/projects/datascience/zhen/DeepSpeed
+cd /lus/theta-fs0/projects/datascience/zhen/DeepSpeed
 ```
 ```bash
-#deepspeed cifar10_deepspeed.py --deepspeed --deepspeed_config ds_config.json $@
+deepspeed cifar10_deepspeed.py --deepspeed --deepspeed_config ds_config.json $@
 ```
 
 For submitting jobs in the script (non-interactive) job mode, take a look in the `submissions` folder for more details about this.
